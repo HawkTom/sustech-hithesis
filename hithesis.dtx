@@ -16,7 +16,7 @@
 %
 % \iffalse
 %<*driver>
-\ProvidesFile{hithesis.dtx}[2019/03/02 2.0.7 Harbin Institute of Technology Thesis Template]
+\ProvidesFile{hithesis.dtx}[2018/12/05 2.0.6 Harbin Institute of Technology Thesis Template]
 \documentclass{ltxdoc}
 \usepackage{dtx-style}
 
@@ -941,7 +941,7 @@
 %<cls>\NeedsTeXFormat{LaTeX2e}[1999/12/01]
 %<cls>\ProvidesClass{hithesis}
 %<cfg>\ProvidesFile{hithesis.cfg}
-%<cls|cfg>[2019/03/02 2.0.7 Harbin Institute of Technology Thesis Template]
+%<cls|cfg>[2018/12/05 2.0.6 Harbin Institute of Technology Thesis Template]
 %    \end{macrocode}
 %
 % \subsection{定义选项}
@@ -1366,7 +1366,7 @@ delim_1 "\\hspace*{\\fill}"
 
 \renewcommand\mainmatter{%
   \ifhit@tocblank%
-  \addtocontents{toc}{\vspace{\baselineskip}} %规范中并没有这一要求，此处不应该加
+  %\addtocontents{toc}{\vspace{\baselineskip}} %规范中并没有这一要求，此处不应该加
   \addtocontents{toe}{\vspace{\baselineskip}}
   \fi%
   \ifhit@openright\cleardoublepage\else\clearpage\fi
@@ -2232,16 +2232,47 @@ delim_1 "\\hspace*{\\fill}"
 \def\hit@acknowledgement@etitle{Acknowledgements}
 \def\hit@resume@ctitle{个人简历}
 \def\hit@resume@etitle{Resume}
+\def\hit@authorization@ctitle{南方科技大学学位论文原创性声明和使用授权说明}
+\def\hit@authorization@xtitle{哈尔滨工业大学与南方科技大学联合培养研究生学位论文原创性声明和使用权限}
 \def\hit@authorization@ctitleone{哈尔滨工业大学与南方科技大学联合培养研究生}
 \def\hit@authorization@ctitletwo{学位论文原创性声明和使用权限}
 \def\hit@authorization@etitle{Statement of copyright and Letter of authorization}
 \newcommand{\hit@authorsig}{作者签名：}
-\newcommand{\hit@teachersig}{导师签名：}
+\newcommand{\hit@teachersig}{指导教师签名：}
 \newcommand{\hit@frontdate}{日期：}
 \newcommand{\hit@denotation@ctitle}{物理量名称及符号表}
 \newcommand{\hit@denotation@etitle}{List of physical quantity and symbol}
-\newcommand{\hit@authorizationtitle}{学位论文使用权限}
+\newcommand{\hit@authorizationtitle}{南方科技大学联培学位论文使用授权书}
 \newcommand{\hit@authorizationtext}{%
+本人完全了解南方科技大学有关收集、保留、使用学位论文的规定，即：
+
+1.	按学校规定提交学位论文的电子版本。
+
+2.	学校有权保留并向国家有关部门或机构送交学位论文的电子版，允许论文被查阅。
+
+3.	在以教学与科研服务为目的前提下，学校可以将学位论文的全部或部分内容存储在有关数据库提供检索，并可采用数字化、云存储或其他存储手段保存本学位论文。在本论文提交后，同意在校园网内公开论文的在线浏览并下载全文。
+
+4．保密的学位论文在解密后适用本授权书。
+}
+\newcommand{\hit@declarename@bachelor}{哈尔滨工业大学本科毕业设计（论文）原创性声明}
+\newcommand{\hit@authorizationtext@bachelor}{%
+本人郑重声明：在哈尔滨工业大学攻读学士学位期间，所提交的毕业设计（论文）《\hit@ctitle》，是本人在导师指导下独立进行研究工作所取得的成果。对本文的研究工作做出重要贡献的个人和集体，均已在文中以明确方式注明，其它未注明部分不包含他人已发表或撰写过的研究成果，不存在购买、由他人代写、剽窃和伪造数据等作假行为。
+
+本人愿为此声明承担法律责任。}
+\newcommand{\hit@declarename}{南方科技大学学位论文原创性声明}
+\newcommand{\hit@declaretext}{%
+本人郑重声明：所提交的学位论文是本人在导师指导下独立进行研究工作所取得的成果。除了特别加以标注和致谢的内容外，论文中不包含他人已发表或撰写过的研究成果。对本人的研究做出重要贡献的个人和集体，均已在文中作了明确的说明。本声明的法律结果由本人承担。}
+% \newcommand{\hit@datefill}{\hspace{2.5em}年\hspace{1.5em}月\hspace{1.5em}日}
+\newcommand{\hit@datefill}{\hspace{2.5em}\hspace{1.5em}\hspace{1.5em}}
+\newcommand{\hit@publication@ctitle}{攻读\hit@cxuewei 学位期间发表的论文}
+\newcommand{\hit@publication@etitle}{Papers published in the period of PH.D. education}
+
+
+\newcommand{\hit@authorsighit}{作者签名：}
+\newcommand{\hit@teachersighit}{导师签名：}
+\newcommand{\hit@frontdatehit}{日期：}
+\newcommand{\hit@authorizationtitlehit}{学位论文使用权限}
+\newcommand{\hit@authorizationtexthit}{%
 学位论文是研究生在学校攻读学位期间完成的成果，知识产权归属南方科技大学。学位论文的使用权限如下：
 
 （1）学校可以采用影印、缩印或其他复制手段保存研究生上交的学位论文，并向国家图书馆报送学位论文；（2）学校可以将学位论文部分或全部内容编入有关数据库进行检索和提供相应阅览服务；（3）研究生毕业后发表与此学位论文研究成果相关的学术论文和其他成果时，应征得导师同意，且第一署名单位为南方科技大学。
@@ -2249,17 +2280,15 @@ delim_1 "\\hspace*{\\fill}"
 保密论文在保密期内遵守有关保密规定，解密后适用于此使用权限规定。
 
 本人知悉学位论文的使用权限，并将遵守有关规定。}
-\newcommand{\hit@declarename@bachelor}{哈尔滨工业大学本科毕业设计（论文）原创性声明}
-\newcommand{\hit@authorizationtext@bachelor}{%
-本人郑重声明：在哈尔滨工业大学攻读学士学位期间，所提交的毕业设计（论文）《\hit@ctitle》，是本人在导师指导下独立进行研究工作所取得的成果。对本文的研究工作做出重要贡献的个人和集体，均已在文中以明确方式注明，其它未注明部分不包含他人已发表或撰写过的研究成果，不存在购买、由他人代写、剽窃和伪造数据等作假行为。
-
-本人愿为此声明承担法律责任。}
-\newcommand{\hit@declarename}{学位论文原创性声明}
-\newcommand{\hit@declaretext}{%
+\newcommand{\hit@declarenamehit}{学位论文原创性声明}
+\newcommand{\hit@declaretexthit}{%
 本人郑重声明：此处所提交的学位论文《\hit@ctitle》，是本人在导师指导下，在学校攻读学位期间独立进行研究工作所取得的成果，且学位论文中除已标注引用文献的部分外不包含他人完成或已发表的研究成果。对本学位论文的研究工作做出重要贡献的个人和集体，均已在文中以明确方式注明。}
-\newcommand{\hit@datefill}{\hspace{2.5em}年\hspace{1.5em}月\hspace{1.5em}日}
-\newcommand{\hit@publication@ctitle}{攻读\hit@cxuewei 学位期间发表的论文及其他成果}
-\newcommand{\hit@publication@etitle}{Papers published in the period of PH.D. education}
+\newcommand{\hit@datefillhit}{\hspace{2.5em}年\hspace{1.5em}月\hspace{1.5em}日}
+
+
+
+
+
 \def\hit@index@etitle{Index}
 \def\hit@hi{嗨！thesis}
 \def\hit@cbraceleft{（}
@@ -2358,6 +2387,7 @@ delim_1 "\\hspace*{\\fill}"
   \begin{center}\erhao\heiti\hit@ctitlecover\end{center}
 \ifhit@subtitle\begin{center}\hspace{-4em}\xiaoer\heiti\pozhehao\hit@csubtitle\end{center}\fi
   \begin{center}%
+    \vspace{1.5em}
     \settowidth{\hit@etitlelength}{\erhao\hit@etitle\ifhit@subtitle\hit@title@esep\hit@esubtitle\fi}%
     \ifdim\hit@etitlelength>450mm\xiaoer\else\erhao\fi%
     \textbf{\MakeUppercase{\hit@etitle}%
@@ -2551,6 +2581,7 @@ delim_1 "\\hspace*{\\fill}"
   \def\hit@toc@font{\sffamily}
 \fi
 \def\@pnumwidth{4em}%规定中的提前悬挂
+\def\@xnumwidth{2em}
 \def\@tocrmarg{\@pnumwidth}
 \def\@dotsep{1}
 %    \end{macrocode}
@@ -2566,10 +2597,10 @@ delim_1 "\\hspace*{\\fill}"
     \addpenalty{-\@highpenalty}%
     %\vskip 4bp \@plus\p@
     \begingroup
-      \parindent \z@ \rightskip \@pnumwidth
-      \parfillskip -\@pnumwidth
+      \parindent \z@ \rightskip \@xnumwidth
+      \parfillskip -\@xnumwidth      
       \leavevmode
-      \advance\leftskip\@tempdima
+      % \advance\leftskip\@tempdima
       \hskip -\leftskip
       % numberline is called here, and it uses \@tempdima
       {\ifhit@bachelor\sffamily\else\csname hit@toc@font\endcsname\fi\heiti #1}
@@ -2578,6 +2609,7 @@ delim_1 "\\hspace*{\\fill}"
       \penalty\@highpenalty
     \endgroup
   \fi}
+  %\parindent \z@ \rightskip \@xnumwidth
 %    \end{macrocode}
 % 按工大标准, 缩小目录中各级标题之间的缩进，使它们相隔一个字符距离，也就是12pt。
 %    \begin{macrocode}
@@ -2669,7 +2701,8 @@ delim_1 "\\hspace*{\\fill}"
 
 \newlist{idxwordlist}{description}{3}
 \setlist[idxwordlist, 1]{%
-  itemsep=\baselineskip,
+  % itemsep=\baselineskip,
+  nonsep,
   labelindent=8em,
   font=\normalsize\bfseries,
 }
@@ -2684,28 +2717,45 @@ delim_1 "\\hspace*{\\fill}"
   font=\wuhao\rm,
 }
 
-% \definecolor{MyGray}{rgb}{0.96,0.97,0.98}
-\definecolor{White}{rgb}{1, 1, 1}
 \def\hit@authorization@other{%
   \ifhit@openright\cleardoublepage\else\clearpage\fi
-  \hit@appendix@chapter*{ \hit@authorization@ctitletwo }[\hit@authorization@etitle]
-  % \xiaosi[1]\vspace{\baselineskip}
- % \hit@appendix@chapter*{\hit@authorization@ctitletwo}[\hit@authorization@etitle]
-  \xiaosi[1.6]\vspace{-2.2\baselineskip}
-  \begin{center}\xiaoer\heiti\colorbox{White}{\hit@authorization@ctitleone}\end{center}
+  %\hit@appendix@chapter*{\hit@authorization@ctitleone\hit@authorization@ctitletwo}[\hit@authorization@etitle]
+  \hit@appendix@chapter*{\hit@authorization@ctitleone}[\hit@authorization@etitle]  
   \begin{center}\xiaoer\heiti\hit@authorization@ctitletwo\end{center}
   \xiaosi[1.6]\vspace{\baselineskip}
-\begin{center}\xiaosan\heiti\hit@declarename\end{center}
-\par\hit@declaretext
+\begin{center}\xiaosan\heiti\hit@declarenamehit\end{center}
+\par\hit@declaretexthit
 \vspace{\baselineskip}
-\par\hspace{6em}\hit@authorsig\hfill\hit@frontdate\hit@datefill
+\par\hspace{6em}\hit@authorsighit\hfill\hit@frontdatehit\hit@datefillhit
 \vspace{2\baselineskip}
-\begin{center}\xiaosan\heiti\hit@authorizationtitle\end{center}
-\par\hit@authorizationtext
+\begin{center}\xiaosan\heiti\hit@authorizationtitlehit\end{center}
+\par\hit@authorizationtexthit
 \vspace{2\baselineskip}
-\par\hspace{6em}\hit@authorsig\hfill\hit@frontdate\hit@datefill
+\par\hspace{6em}\hit@authorsighit\hfill\hit@frontdatehit\hit@datefillhit
 \vspace{2\baselineskip}
-\par\hspace{6em}\hit@teachersig\hfill\hit@frontdate\hit@datefill}
+\par\hspace{6em}\hit@teachersighit\hfill\hit@frontdatehit\hit@datefillhit
+  % 尝试添加南方科技大学声明  开始
+
+  \hit@appendix@chapter*{\hit@authorization@ctitle}[\hit@authorization@etitle]  
+  % \cleardoublepage
+
+  % \begin{center}\xiaoer\end{center}
+  % \begin{center}\xiaoer\heiti\hit@authorization@ctitleone\end{center}
+  \xiaosi[1.6]\vspace{\baselineskip}
+  \begin{center}\xiaosan\heiti\hit@declarename\end{center}
+    \par\hit@declaretext
+    \vspace{\baselineskip}
+    \par\hspace{0em}\hit@authorsig \hspace{12em} \hit@frontdate\hit@datefill
+    \vspace{2\baselineskip}
+    \begin{center}\xiaosan\heiti\hit@authorizationtitle\end{center}
+    \par\hit@authorizationtext
+    \vspace{2\baselineskip}
+    \par\hspace{0em}\hit@authorsig \hspace{12em} \hit@frontdate\hit@datefill
+    \par\hspace{0em}\hit@teachersig \hspace{10em} \hit@frontdate\hit@datefill
+  % 尝试添加南方科技大学声明  结束
+
+}
+
 \def\hit@authorization@bachelor{%
   \ifhit@openright\cleardoublepage\else\clearpage\fi
   \hit@appendix@chapter*{\hit@declarename@bachelor}
@@ -2715,18 +2765,25 @@ delim_1 "\\hspace*{\\fill}"
 }
 
 \NewDocumentCommand{\authorization}{o}{%
-  \IfNoValueTF{#1}{%
+  \IfNoValueTF{#1}{%    
     \ifhit@bachelor\hit@authorization@bachelor\else\hit@authorization@other\fi
     }{%
     \includepdf[fitpaper=true,pagecommand={%
 	\thispagestyle{hit@empty}%
-	\phantomsection\addcontentsline{toc}{chapter}{\ifhit@bachelor\hit@declarename@bachelor\else\hit@authorization@ctitleone\fi}%
-	\ifhit@doctor%
-%    \end{macrocode}
-% \changes{v1.0.13}{2018/4/5}{添加\cs{texorpdfstring}命令去除书签中带有格式时的警告}
-%    \begin{macrocode}
-		\addcontentsline{toe}{chapter}{\texorpdfstring{\bfseries \hit@authorization@etitle}{\hit@authorization@etitle}}%
-	\fi%
+	%\phantomsection\addcontentsline{toc}{chapter}{\ifhit@bachelor\hit@declarename@bachelor\else\hit@authorization@xtitle\fi}%
+  \phantomsection\addcontentsline{toc}{chapter}{\ifhit@bachelor\hit@declarename@bachelor\else\hit@authorization@xtitle\fi}%
+    }]{#1}%
+  }%
+}
+
+\NewDocumentCommand{\authorizations}{o}{%
+  \IfNoValueTF{#1}{%    
+    \ifhit@bachelor\hit@authorization@bachelor\else\hit@authorization@other\fi
+    }{%
+    \includepdf[fitpaper=true,pagecommand={%
+	\thispagestyle{hit@empty}%
+	%\phantomsection\addcontentsline{toc}{chapter}{\ifhit@bachelor\hit@declarename@bachelor\else\hit@authorization@xtitle\fi}%
+  \phantomsection\addcontentsline{toc}{chapter}{\ifhit@bachelor\hit@declarename@bachelor\else\hit@authorization@ctitle\fi}%
     }]{#1}%
   }%
 }
@@ -2756,10 +2813,6 @@ delim_1 "\\hspace*{\\fill}"
     \let\p@enumiv\@empty
   \renewcommand\theenumiv{\@arabic\c@enumiv}}%
   \sloppy\frenchspacing
-%    \end{macrocode}
-% \changes{v2.0.7}{2019/03/02}{添加flushbottom到thebibliography环境中}
-%    \begin{macrocode}
-  \flushbottom
 %    \end{macrocode}
 % \changes{v2.0.3}{2018/10/08}{添加参考文献分割开关}
 %    \begin{macrocode}
